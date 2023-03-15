@@ -5,10 +5,19 @@ using UnityEngine;
 public class TestScript : MonoBehaviour
 {
     public ImgsFillDynamic ImgsFD;
-
+    public GameObject ControlRods;
+    
+    
     private void Update()
     {
         // Just Test >___<~*
+
+        if(ControlRods.GetComponent<MoveRods>().enabled == false)
+            this.ImgsFD.SetValue(Random.Range(0.75F, 1F), false, Random.Range(1F, 2F));
+
+        if(ControlRods.GetComponent<MoveRods>().enabled == true)
+            this.ImgsFD.SetValue(Random.Range(0F, 0.7F), false, Random.Range(1F, 2F));
+
         if (Input.GetKeyDown(KeyCode.Space))
             this.ImgsFD.SetValue(Random.Range(0F, 1F), false, Random.Range(1F, 2F));
 

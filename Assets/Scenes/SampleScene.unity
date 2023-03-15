@@ -586,7 +586,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Pull lever to drop control rods until temperature has subsided. '
+  m_Text: 'Pull lever to lower control rods until temperature has subsided to safe
+    levels. '
 --- !u!222 &147572839
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -948,7 +949,7 @@ PrefabInstance:
     - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
         type: 3}
       propertyPath: TailText
-      value: "\xB0 F"
+      value: "\xB0 C"
       objectReference: {fileID: 0}
     - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
         type: 3}
@@ -972,7 +973,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
         type: 3}
+      propertyPath: MultifyText
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
       propertyPath: IsUsingMaxColor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[0].r
+      value: 0.29910004
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[1].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[1].r
+      value: 0.72543967
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[2].g
+      value: 0.989607
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[3].b
+      value: 0.02336242
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[3].g
+      value: 0.37018418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[3].r
+      value: 0.7075472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[4].g
+      value: 0.049950637
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899898029282573489, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
+        type: 3}
+      propertyPath: PercentByColor.Array.data[4].r
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1899898029282573491, guid: 6604ce1cd5dac8c40b0b212a9a554f5f,
@@ -2913,8 +2969,9 @@ GameObject:
   - component: {fileID: 842486979}
   - component: {fileID: 842486982}
   - component: {fileID: 842486981}
+  - component: {fileID: 842486983}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ControlRods
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2927,13 +2984,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842486978}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fae440fe187ad41ca907c003a86cbee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 987141098}
-  speed: 0
+  speed: 1
 --- !u!4 &842486980
 Transform:
   m_ObjectHideFlags: 0
@@ -3006,6 +3063,21 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &842486983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842486978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7378e2afe96e1403ab82b08c7b2020e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rods: {fileID: 842486978}
+  target: {fileID: 1714816261}
+  speed: 1
 --- !u!1 &869514949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4014,7 +4086,7 @@ Transform:
   m_Children:
   - {fileID: 987141098}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &987141097
 GameObject:
@@ -5025,6 +5097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImgsFD: {fileID: 457068928}
+  ControlRods: {fileID: 842486978}
 --- !u!1 &1325641950
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,6 +6556,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636072737}
   m_Mesh: {fileID: 4300000, guid: 55f245a8b20473e42a2629dfd0e9de75, type: 3}
+--- !u!1 &1714816260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714816261}
+  m_Layer: 0
+  m_Name: homePos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714816261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714816260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.25, y: 1.9627085, z: 10.60947}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1715921807
 PrefabInstance:
   m_ObjectHideFlags: 0

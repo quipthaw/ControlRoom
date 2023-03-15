@@ -17,6 +17,7 @@ public class ImgsFillDynamic : MonoBehaviour
     public float Factor { get { return this.facter; } }
 
     public Color[] PercentByColor;
+   
 
     public bool IsUsingMaxColor = false;
     public Color MaxColor;
@@ -101,9 +102,13 @@ public class ImgsFillDynamic : MonoBehaviour
         }
 
         int arr = (int)Mathf.Lerp(0, this.PercentByColor.Length, this.facter);
+
+
         if (arr >= this.PercentByColor.Length)
             arr = this.PercentByColor.Length - 1;
         else if (arr < 0) arr = 0;
+
+
         for (int i = 0; i < this.ImgFacterTarget.Length; i++)
             this.ImgFacterTarget[i].color = this.PercentByColor[arr];
     }
