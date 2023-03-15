@@ -14,6 +14,7 @@ public class MoveRods : MonoBehaviour {
             else {
                 transform.position = target.position;
             }
+
         }
     }
 }
