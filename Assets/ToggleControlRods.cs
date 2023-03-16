@@ -11,7 +11,6 @@ public class ToggleControlRods : MonoBehaviour
     void Update()
     {
         float angle = this.GetComponent<HingeJoint>().angle;
-        Debug.Log(angle);
         if (angle > 0)
         {
             controlRods.enabled = true;
