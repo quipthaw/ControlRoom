@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.SceneManagement;
 
 public class FuseBehavior : MonoBehaviour
 {
@@ -14,8 +15,13 @@ public class FuseBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Random.InitState(System.DateTime.Now.Millisecond * this.gameObject.GetHashCode());
-        StartCoroutine(wait());
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        if (currentSceneName == "Fuses")
+        {
+            Random.InitState(System.DateTime.Now.Millisecond * this.gameObject.GetHashCode());
+            StartCoroutine(wait());
+        }
     }
 
     // Update is called once per frame

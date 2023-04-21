@@ -9,8 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: c8e9ae1e75735e845a21950a83d95d4e
   - enabled: 1
-    path: Assets/Scenes/BaseScene.unity
+    path: Assets/Scenes/Lessons/Cooling.unity
     guid: eaf9ab6c896dc844b839b182f609099a
+  - enabled: 1
+    path: Assets/Scenes/Lessons/Fuses.unity
+    guid: 65e71f53cd8768948898dbebca9cefca
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d2ac722550ec09c4eae1a93c4950da1f,
       type: 2}

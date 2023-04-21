@@ -7,8 +7,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         //Debug.Log("WE loading");
-        SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         controller.SetActive(false);
-        SceneManager.UnloadSceneAsync("MainMenu");
     }
 }
