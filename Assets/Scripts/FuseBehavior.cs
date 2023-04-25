@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 public class FuseBehavior : MonoBehaviour
 {
     public bool replaced = false;
+
     private bool movementFinished = false;
+
     private GameObject fuse;
     public XRSocketInteractor socket;
     private float randomNumber; 
@@ -96,6 +98,11 @@ public class FuseBehavior : MonoBehaviour
     public bool getReplaced()
     {
         return replaced;
+    }
+
+    public bool getMovementFinished()
+    {
+        return movementFinished;
     }
 
 }
