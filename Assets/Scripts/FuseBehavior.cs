@@ -35,10 +35,8 @@ public class FuseBehavior : MonoBehaviour
 
     IEnumerator wait()
     {
-        randomNumber = Random.Range(5, 18);
-        Debug.Log(randomNumber);
+        randomNumber = Random.Range(5, 38);
         yield return new WaitForSeconds(randomNumber);
-        Debug.Log("Done waiting!");
         XRBaseInteractable obj = (XRBaseInteractable)socket.GetOldestInteractableSelected();
 
         if (obj != null)
