@@ -19,7 +19,7 @@ public class FuseBehavior : MonoBehaviour
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        if (currentSceneName == "Fuses")
+        if (currentSceneName == "Fuses" || currentSceneName == "Test")
         {
             Random.InitState(System.DateTime.Now.Millisecond * this.gameObject.GetHashCode());
             StartCoroutine(wait());
